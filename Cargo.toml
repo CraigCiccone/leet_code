@@ -6,7 +6,10 @@ members = [
     "how_many_numbers_are_smaller_than_the_current_number",
     "longest_substring_without_repeating_characters",
     "merge_two_sorted_lists",
+    "palindrome_number",
     "running_sum_of_1d_array",
+    "shuffle_string",
     "shuffle_the_array",
+    "single_number",
     "subtract_the_product_and_sum_of_digits_of_an_integer",
 ]
