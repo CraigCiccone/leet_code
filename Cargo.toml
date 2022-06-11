@@ -5,6 +5,7 @@ members = [
     "find_numbers_with_even_number_of_digits",
     "how_many_numbers_are_smaller_than_the_current_number",
     "longest_substring_without_repeating_characters",
+    "merge_two_sorted_lists",
     "running_sum_of_1d_array",
     "shuffle_the_array",
     "subtract_the_product_and_sum_of_digits_of_an_integer",
