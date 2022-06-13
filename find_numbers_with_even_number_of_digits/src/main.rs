@@ -24,7 +24,7 @@
 // Constraints:
 //
 // 1 <= nums.length <= 500
-// 1 <= nums[i] <= 105
+// 1 <= nums[i] <= 10^5
 
 fn find_numbers(nums: Vec<i32>) -> i32 {
     let mut count = 0;

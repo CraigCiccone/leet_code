@@ -24,7 +24,7 @@
 //
 // Constraints:
 //
-// -231 <= x <= 231 - 1
+// -2^31 <= x <= 2^31 - 1
 
 fn is_palindrome(x: i32) -> bool {
     let x_str = x.to_string();

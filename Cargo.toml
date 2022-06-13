@@ -5,6 +5,7 @@ members = [
     "find_numbers_with_even_number_of_digits",
     "how_many_numbers_are_smaller_than_the_current_number",
     "longest_substring_without_repeating_characters",
+    "merge_intervals",
     "merge_two_sorted_lists",
     "palindrome_number",
     "running_sum_of_1d_array",
@@ -12,5 +13,7 @@ members = [
     "shuffle_the_array",
     "single_number",
     "subtract_the_product_and_sum_of_digits_of_an_integer",
+    "triangle",
     "two_sum",
+    "valid_anagram",
 ]
