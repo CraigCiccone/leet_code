@@ -1,5 +1,8 @@
 [workspace]
 members = [
+    "binary_search",
+    "container_with_most_water",
+    "counting_bits",
     "create_target_array_in_the_given_order",
     "defanging_an_ip_address",
     "find_numbers_with_even_number_of_digits",
@@ -11,6 +14,8 @@ members = [
     "palindrome_number",
     "reverse_linked_list",
     "running_sum_of_1d_array",
+    "same_tree",
+    "set_matrix_zeroes",
     "shuffle_string",
     "shuffle_the_array",
     "single_number",
