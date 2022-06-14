@@ -38,7 +38,7 @@ fn depth_first_search(triangle: &Vec<Vec<i32>>, row: usize, col: usize) -> i32 {
     let sum_left = triangle[row][col] + depth_first_search(triangle, row + 1, col);
     let sum_right = triangle[row][col] + depth_first_search(triangle, row + 1, col + 1);
 
-    return cmp::min(sum_left, sum_right);
+    cmp::min(sum_left, sum_right)
 }
 
 fn minimum_total(triangle: Vec<Vec<i32>>) -> i32 {

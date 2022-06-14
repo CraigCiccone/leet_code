@@ -42,20 +42,25 @@ fn merge(
     list2: Option<Box<ListNode>>,
     next: &mut Option<Box<ListNode>>,
 ) -> &mut Option<Box<ListNode>> {
-    if list1.is_some() && list2.is_none() {
-        next.replace(Box::new(ListNode::new(list1.as_ref().unwrap().val)));
-        merge(list1.unwrap().next, list2, &mut next.as_mut().unwrap().next);
-    } else if list1.is_none() && list2.is_some() {
-        next.replace(Box::new(ListNode::new(list2.as_ref().unwrap().val)));
-        merge(list1, list2.unwrap().next, &mut next.as_mut().unwrap().next);
-    } else if list1.is_some() && list2.is_some() {
-        if list1.as_ref().unwrap().val <= list2.as_ref().unwrap().val {
-            next.replace(Box::new(ListNode::new(list1.as_ref().unwrap().val)));
-            merge(list1.unwrap().next, list2, &mut next.as_mut().unwrap().next);
-        } else {
-            next.replace(Box::new(ListNode::new(list2.as_ref().unwrap().val)));
-            merge(list1, list2.unwrap().next, &mut next.as_mut().unwrap().next);
+    match (&list1, &list2) {
+        (Some(l1), None) => {
+            next.replace(Box::new(ListNode::new(l1.val)));
+            merge(l1.next.clone(), list2, &mut next.as_mut().unwrap().next);
         }
+        (None, Some(l2)) => {
+            next.replace(Box::new(ListNode::new(l2.val)));
+            merge(list1, l2.next.clone(), &mut next.as_mut().unwrap().next);
+        }
+        (Some(l1), Some(l2)) => {
+            if l1.val <= l2.val {
+                next.replace(Box::new(ListNode::new(l1.val)));
+                merge(l1.next.clone(), list2, &mut next.as_mut().unwrap().next);
+            } else {
+                next.replace(Box::new(ListNode::new(l2.val)));
+                merge(list1, l2.next.clone(), &mut next.as_mut().unwrap().next);
+            }
+        }
+        _ => (),
     }
 
     next

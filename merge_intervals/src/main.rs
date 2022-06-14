@@ -23,20 +23,16 @@
 
 use std::cmp;
 
-fn overlap(a: &Vec<i32>, b: &Vec<i32>) -> bool {
-    if b[0] >= a[0] && b[0] <= a[1] {
-        true
-    } else {
-        false
-    }
+fn overlap(a: &[i32], b: &[i32]) -> bool {
+    b[0] >= a[0] && b[0] <= a[1]
 }
 
-fn combine(a: &Vec<i32>, b: &Vec<i32>) -> Vec<i32> {
+fn combine(a: &[i32], b: &[i32]) -> Vec<i32> {
     vec![cmp::min(a[0], b[0]), cmp::max(a[1], b[1])]
 }
 
-fn run(intervals: &Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-    let mut results = intervals.clone();
+fn run(intervals: &[Vec<i32>]) -> Vec<Vec<i32>> {
+    let mut results = intervals.to_owned();
 
     'outer: for (i, a) in intervals.iter().enumerate() {
         for (j, b) in intervals.iter().enumerate() {
@@ -55,7 +51,7 @@ fn run(intervals: &Vec<Vec<i32>>) -> Vec<Vec<i32>> {
 }
 
 fn merge(intervals: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-    let mut old = intervals.clone();
+    let mut old = intervals;
     let mut new = run(&old);
 
     while new != old {

@@ -19,8 +19,7 @@
 // The given address is a valid IPv4 address.
 
 fn defang_i_paddr(address: String) -> String {
-    let addr = address.replace(".", "[.]");
-    addr
+    address.replace('.', "[.]")
 }
 
 fn main() {

@@ -40,7 +40,7 @@ fn single_number(nums: Vec<i32>) -> i32 {
         }
     }
 
-    return 0;
+    0
 }
 
 fn main() {
