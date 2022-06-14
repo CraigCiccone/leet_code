@@ -12,6 +12,7 @@ members = [
     "merge_intervals",
     "merge_two_sorted_lists",
     "palindrome_number",
+    "pascal_triangle",
     "reverse_linked_list",
     "running_sum_of_1d_array",
     "same_tree",
@@ -23,4 +24,5 @@ members = [
     "triangle",
     "two_sum",
     "valid_anagram",
+    "valid_parentheses",
 ]
